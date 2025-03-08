@@ -15,13 +15,13 @@ func NewApp() *App {
 	return &App{}
 }
 
-// startup is called when the app starts. The context is saved
-// so we can call the runtime methods
+// startup вызывается при запуске приложения. Контекст сохраняется
+// таким образом, мы можем вызывать методы среды выполнения
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-// Greet returns a greeting for the given name
+// // Great возвращает приветствие для данного имени
 func (a *App) Greet(name string) string {
 	return fmt.Sprintf("Hello %s, It's show time!", name)
 }

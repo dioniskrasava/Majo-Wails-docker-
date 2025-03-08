@@ -12,14 +12,16 @@ import (
 var assets embed.FS
 
 func main() {
-	// Create an instance of the app structure
+	// Создаем экземпляр приложения
 	app := NewApp()
 
-	// Create application with options
+	// Настройки приложения
 	err := wails.Run(&options.App{
-		Title:  "MyAppWails1",
-		Width:  1024,
-		Height: 768,
+		Title:     "MyAppWails1",
+		Width:     800, // Начальная ширина окна
+		Height:    600, // Начальная высота окна
+		MinWidth:  400, // Минимальная ширина окна
+		MinHeight: 300, // Минимальная высота окна
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
