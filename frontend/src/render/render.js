@@ -3,7 +3,7 @@ export function renderApp() {
 <form>
 
 <div>
- <label>Добавление активности:</label>
+ <label id="top-label">Добавление активности:</label>
 </div>
 
     <!-- Первая строка: Тип активности -->

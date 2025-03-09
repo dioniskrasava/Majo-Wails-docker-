@@ -3,6 +3,7 @@
     margin: 20px;
   }
 
+
   form {
     display: flex;
     flex-direction: column;
@@ -40,6 +41,7 @@
 /*Анимации при наведении на кнопки:*/
   button:hover {
     background-color: #398ad5;
-    transition: background-color 0.3s ease;
+    transition: background-color 2.3s ease;
   }
+
   
