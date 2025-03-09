@@ -18,9 +18,9 @@ func main() {
 	// Настройки приложения
 	err := wails.Run(&options.App{
 		Title:     "MyAppWails1",
-		Width:     800, // Начальная ширина окна
-		Height:    600, // Начальная высота окна
-		MinWidth:  400, // Минимальная ширина окна
+		Width:     500, // Начальная ширина окна
+		Height:    300, // Начальная высота окна
+		MinWidth:  500, // Минимальная ширина окна
 		MinHeight: 300, // Минимальная высота окна
 		AssetServer: &assetserver.Options{
 			Assets: assets,
