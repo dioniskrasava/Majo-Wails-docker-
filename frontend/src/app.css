@@ -41,10 +41,16 @@
   }
 
   /* Тени и рамки для полей ввода и кнопок:*/
-  select, input, button {
+  select, input, button, textarea, label {
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  label{
+    padding: 2px;
+    border-color: rgb(45, 46, 48);
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.3);
   }
 
 /*Анимации при наведении на кнопки:*/
@@ -75,8 +81,12 @@
   }
   
   .custom-content {
-    font-size: 14px;
+    font-size: 13px;
   }
+
+
+  
+
 
 
   

@@ -25,6 +25,7 @@ sudo docker run -it --rm \
     wails-app
 
 
-### Зависимости
+### Зависимости при разработке
+// https://sweetalert2.github.io/
 
 npm install sweetalert2

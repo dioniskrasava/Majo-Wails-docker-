@@ -40,11 +40,16 @@ export function renderApp() {
       <button type="button" id="set-total-time">*</button>
     </div>
 
-     <!-- 4 строка: Общее время -->
+     <!-- 5 строка: Комментарии -->
     <div class="form-row">
       <label for="comment">Комментарий :</label>
       <textarea id="comment" name="comment-activity" rows="2" cols="40"  placeholder="Comments"></textarea>
      
+    </div>
+
+    <!-- 6 строка: Кнопка добавления -->
+    <div class="form-row">
+       <button type="button">Добавить запись</button>
     </div>
 
   </form>
@@ -105,18 +110,45 @@ export function renderApp() {
 
         // Проверяем, что оба поля заполнены
         if (!startTime || !endTime) {
-          alert("Пожалуйста, заполните оба поля времени.");
+          Swal.fire({
+            icon: "error",
+            title: "Ошибка",
+            text: "Заполните оба поля времения!",
+            customClass: {
+              popup: "custom-popup", // Класс для окна
+              title: "custom-title", // Класс для заголовка
+              content: "custom-content", // Класс для контента
+            },
+          });
           return;
         }
 
         // Валидация (проверка) формата времени:
         const timePattern = /^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/;
-        if (!timePattern.test(startTime)) {
-          alert("Некорректный формат времени начала.");
+        if (!timePattern.test(startTime)){
+          Swal.fire({
+            icon: "error",
+            title: "Ошибка",
+            text: "Некорректный формат времени начала.",
+            customClass: {
+              popup: "custom-popup", // Класс для окна
+              title: "custom-title", // Класс для заголовка
+              content: "custom-content", // Класс для контента
+            },
+          });
           return;
         }
         if (!timePattern.test(endTime)) {
-          alert("Некорректный формат времени окончания.");
+          Swal.fire({
+            icon: "error",
+            title: "Ошибка",
+            text: "Некорректный формат времени окончания.",
+            customClass: {
+              popup: "custom-popup", // Класс для окна
+              title: "custom-title", // Класс для заголовка
+              content: "custom-content", // Класс для контента
+            },
+          });
           return;
         }
 
@@ -129,7 +161,16 @@ export function renderApp() {
 
         // Если разница отрицательная, значит end-time меньше start-time
         if (diffInMs < 0) {
-          alert("Время окончания не может быть меньше времени начала.");
+          Swal.fire({
+            icon: "error",
+            title: "Ошибка",
+            text: "Время окончания не может быть меньше времени начала",
+            customClass: {
+              popup: "custom-popup", // Класс для окна
+              title: "custom-title", // Класс для заголовка
+              content: "custom-content", // Класс для контента
+            },
+          });
           return;
         }
 
