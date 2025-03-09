@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(30, 32, 36);
+    background-color: rgb(45, 46, 48);
     text-align: center;
     color: white;
 }
@@ -23,4 +23,9 @@ body {
 #app {
     height: 100vh;
     text-align: center;
+}
+
+
+::-webkit-scrollbar {
+    display: none; /* Для Chrome, Safari, Edge */
 }
